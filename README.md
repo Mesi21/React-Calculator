@@ -5,6 +5,10 @@
 This project is about making a simple calculator app using React.
 It was created with [Create-React-App](https://github.com/facebook/create-react-app)
 
+## Live version
+
+For the live version of this project visit the following [link]("https://mesi-react-calculator.herokuapp.com/") 
+
 ## Get started
 
 ```bash
