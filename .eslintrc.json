@@ -1,0 +1,82 @@
+{
+	"env": {
+	  "browser": true,
+	  "node": true,
+	  "jest": true,
+	  "es6": true
+	},
+	"extends": "eslint:recommended",
+	"plugins": ["react"],
+	"globals": {
+	  "Atomics": "readonly",
+	  "SharedArrayBuffer": "readonly"
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+	  "ecmaVersion": 2015,
+	  "sourceType": "module",
+	  "ecmaFeatures": {
+		  "jsx": true
+	  }
+	},
+	"rules": {
+	  "max-len": ["error", { "code": 80, "tabWidth": 4 }],
+	  "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+	  "no-param-reassign": ["error", { "props": false }],
+	  "semi": ["error", "always"],
+	  "object-shorthand": ["error", "always", { "avoidQuotes": true }],
+	  "no-else-return": "error",
+	  "arrow-body-style": ["error", "as-needed"],
+	  "no-multi-spaces": [
+		"error",
+		{ "ignoreEOLComments": false, "exceptions": { "Property": true } }
+	  ],
+	  "prefer-const": "error",
+	  "object-property-newline": [
+		"error",
+		{ "allowAllPropertiesOnSameLine": true }
+	  ],
+	  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/state-in-constructor": [0, "never"],
+      "react/destructuring-assignment": [0, "never", { "ignoreClassFields": "true" }],
+      "react/prop-types": 0,
+      "import/extensions": "off",
+      "import/no-named-as-default": 0,
+      "no-named-as-default-member": 0,
+      "no-nested-ternary": 0,
+      "no-unused-expressions": 0,
+      "no-restricted-globals": 0,
+      "import/no-unresolved": "off",
+	  "no-unneeded-ternary": ["error", { "defaultAssignment": true }],
+	  "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+	  "keyword-spacing": ["error", { "before": true, "after": true }],
+	  "space-infix-ops": ["error", { "int32Hint": false }],
+	  "object-curly-newline": [
+		"error",
+		{
+		  "ObjectExpression": { "multiline": true, "minProperties": 5 },
+		  "ObjectPattern": { "multiline": true, "minProperties": 5 },
+		  "ImportDeclaration": { "multiline": true, "minProperties": 4 },
+		  "ExportDeclaration": { "multiline": true, "minProperties": 4 }
+		}
+	  ],
+	  "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+	  "comma-dangle": [
+		"error",
+		{
+		  "arrays": "always-multiline",
+		  "objects": "always-multiline",
+		  "imports": "always-multiline",
+		  "exports": "always-multiline",
+		  "functions": "never"
+		}
+	  ],
+	  "space-before-function-paren": [
+		"error",
+		{ "anonymous": "always", "named": "never", "asyncArrow": "always" }
+	  ],
+	  "indent": ["error", 2],
+	  "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+	  "no-console": ["error", { "allow": ["warn"] }]
+	}
+  }
