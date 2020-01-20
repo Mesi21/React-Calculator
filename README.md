@@ -7,10 +7,10 @@ It was created with [Create-React-App](https://github.com/facebook/create-react-
 
 ## Get started
 
-``bash
+```bash
    git clone git@github.com:Mesi21/React-Calculator.git
    cd into the folder by typing: cd React-calculator
-``
+```
 
  :heavy_plus_sign: add your contribution if you'd like
  And please feel free to make a PR
