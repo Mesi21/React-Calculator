@@ -5,17 +5,17 @@ function ButtonPanel() {
   return (
     <div id="btnPanel">
       <div className="rows">
-        <Button btnbtnName="AC" />
-        <Button btnbtnName="+/-" />
-        <Button btnbtnName="%" />
-        <Button btnbtnName="÷" />
+        <Button btnName="AC" />
+        <Button btnName="+/-" />
+        <Button btnName="%" />
+        <Button btnName="÷" />
       </div>
 
       <div className="rows">
-        <Button btnbtnName="7" />
-        <Button btnbtnName="8" />
-        <Button btnbtnName="9" />
-        <Button btnbtnName="X" />
+        <Button btnName="7" />
+        <Button btnName="8" />
+        <Button btnName="9" />
+        <Button btnName="X" />
       </div>
 
       <div className="rows">
