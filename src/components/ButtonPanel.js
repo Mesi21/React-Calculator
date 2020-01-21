@@ -5,37 +5,37 @@ function ButtonPanel() {
   return (
     <div id="btnPanel">
       <div className="rows">
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="÷" />
+        <Button btnbtnName="AC" />
+        <Button btnbtnName="+/-" />
+        <Button btnbtnName="%" />
+        <Button btnbtnName="÷" />
       </div>
 
       <div className="rows">
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
+        <Button btnbtnName="7" />
+        <Button btnbtnName="8" />
+        <Button btnbtnName="9" />
+        <Button btnbtnName="X" />
       </div>
 
       <div className="rows">
-        <Button name="4" />
-        <Button name="5" />
-        <Button name="6" />
-        <Button name="-" />
+        <Button btnName="4" />
+        <Button btnName="5" />
+        <Button btnName="6" />
+        <Button btnName="-" />
       </div>
 
       <div className="rows">
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
-        <Button name="+" />
+        <Button btnName="1" />
+        <Button btnName="2" />
+        <Button btnName="3" />
+        <Button btnName="+" />
       </div>
 
       <div className="rows">
-        <Button name="0" />
-        <Button name="." />
-        <Button name="=" />
+        <Button btnName="0" />
+        <Button btnName="." />
+        <Button btnName="=" />
       </div>
     </div>
   );
