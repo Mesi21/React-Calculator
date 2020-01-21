@@ -7,7 +7,7 @@ It was created with [Create-React-App](https://github.com/facebook/create-react-
 
 ## Live version
 
-For the live version of this project visit the following [link](https://dashboard.heroku.com/apps/mesi-react-calculator/) 
+For the live version of this project visit the following [link](https://mesi-react-calculator.herokuapp.com/) 
 
 ## Get started
 
