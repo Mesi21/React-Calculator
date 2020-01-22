@@ -34,7 +34,7 @@ function ButtonPanel() {
       </div>
 
       <div className="rows">
-        <Button btnName="0" />
+        <Button btnName="0" wide="true" />
         <Button btnName="." />
         <Button btnName="=" />
       </div>
