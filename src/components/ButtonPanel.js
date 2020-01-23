@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import '../style/ButtonPanel.css';
 
 function ButtonPanel() {
   return (
@@ -33,7 +34,7 @@ function ButtonPanel() {
       </div>
 
       <div className="rows">
-        <Button btnName="0" />
+        <Button btnName="0" wide="true" />
         <Button btnName="." />
         <Button btnName="=" />
       </div>
