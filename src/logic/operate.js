@@ -1,26 +1,26 @@
-const BigNum = require('big.js');
+import Big from 'big.js';
 
 const operate = (num1, num2, operation) => {
-  let finalRes = new BigNum(0);
-  const a = new BigNum(num1);
-  const b = new BigNum(num2);
+  let finalRes = Big(0);
+  const a = Big(num1);
+  const b = Big(num2);
 
   switch (operation) {
+    case 'x':
+      finalRes = a.times(b);
+      break;
     case '÷':
       try {
-        finalRes = a / b;
+        finalRes = a.div(b);
       } catch (error) {
-        finalRes = 'Er';
+        finalRes = 'Error';
       }
       break;
-    case 'x':
-      finalRes = a * b;
-      break;
     case '-':
-      finalRes = a - b;
+      finalRes = a.minus(b);
       break;
     case '+':
-      finalRes = a + b;
+      finalRes = a.plus(b);
       break;
     default:
       break;
