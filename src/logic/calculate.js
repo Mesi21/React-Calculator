@@ -40,7 +40,7 @@ const calculate = (btnName, dataObj) => {
     case '=':
       next = null;
       total = operate(total, next, operation);
-      return {total}
+      return {total, next, operation}
   }
 };
 
