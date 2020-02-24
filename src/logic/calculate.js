@@ -21,7 +21,7 @@ const calculate = (btnName, dataObj) => {
       } else if (total) {
         total = operate(total, ops[btnName], 'X');
       }
-      return { total, next, operation }
+      return { total, next, operation };
     case '+':
     case '-':
     case 'X':
@@ -37,7 +37,7 @@ const calculate = (btnName, dataObj) => {
         total = next;
         next = null;
         next = operate(total, next, btnName);
-        }
+      }
       return { total, next, btnName };
     case '=':
       next = null;
