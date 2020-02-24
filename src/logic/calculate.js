@@ -49,6 +49,7 @@ const calculate = (btnName, dataObj) => {
       } else if (!next) {
         next = btnName;
       }
+      return { total, next, btnName };
   }
 };
 
