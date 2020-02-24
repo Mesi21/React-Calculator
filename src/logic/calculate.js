@@ -11,7 +11,10 @@ const calculate = (btnName, dataObj) => {
 
   switch(btnName) {
     case 'AC':
-      return { total = null, next = null, operation = null };
+      total = null;
+      next = null;
+      operation = null;
+      return { total, next, operation };
     case '+/-':
       if(next) {
         next = operate(next, ops[btnName], 'X');
