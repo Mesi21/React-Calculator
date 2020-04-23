@@ -1,12 +1,12 @@
 import Big from 'big-js';
 
 const operate = (num1, num2, operation) => {
-  let finalRes = Big(0);
+  let finalRes;
   const a = Big(num1);
   const b = Big(num2);
 
   switch (operation) {
-    case 'x':
+    case 'X':
       finalRes = a.times(b);
       break;
     case '÷':
