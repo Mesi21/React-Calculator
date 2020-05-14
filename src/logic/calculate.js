@@ -1,4 +1,5 @@
 import operate from './operate';
+import Symbols from '../symbols';
 
 const calculate = (btnName, dataObj) => {
   let { total, next, operation } = dataObj;
@@ -10,46 +11,42 @@ const calculate = (btnName, dataObj) => {
   };
 
   switch (btnName) {
-    case 'AC':
-      total = null;
-      next = null;
-      operation = null;
+    case Symbols.AC:
+      total = '0';
+      next = 0;
+      operation = '';
       return { total, next, operation };
-    case '+/-':
+    case Symbols.sign:
       if (next) {
-        next = operate(next, ops[btnName], 'X');
+        next = operate(next, ops[btnName], Symbols.multiplication);
       } else if (total) {
-        total = operate(total, ops[btnName], 'X');
+        total = operate(total, ops[btnName], Symbols.multiplication);
       }
       return { total, next, operation };
-    case '+':
-    case '-':
-    case 'X':
-    case '÷':
-      next = null;
+    case Symbols.addition:
+    case Symbols.subtraction:
+    case Symbols.multiplication:
+    case Symbols.division:
       operation = btnName;
-      total = operate(total, next, operation);
+      total = `${total} ${operation} `;
       return { total, next, operation };
-    case '%':
-      if (!next) {
-        total = operate(total, next = null, btnName);
+    case Symbols.percentage:
+      total *= ops[btnName];
+      return { total, next };
+    case '=': {
+      const [num1, num2] = total.split(operation).map((num) => num.trim());
+      total = operate(num1, num2, operation);
+      operation = '';
+      return { total, next, operation };
+    }
+    default: {
+      if (total === '0') {
+        total = btnName;
       } else {
-        total = next;
-        next = null;
-        next = operate(total, next, btnName);
+        total = `${total}${btnName}`;
       }
-      return { total, next, btnName };
-    case '=':
-      next = null;
-      total = operate(total, next, operation);
       return { total, next, operation };
-    default:
-      if (total && !operation) {
-        total = null;
-      } else if (!next) {
-        next = btnName;
-      }
-      return { total, next, btnName };
+    }
   }
 };
 

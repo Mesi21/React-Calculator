@@ -1,4 +1,5 @@
 import Big from 'big-js';
+import Symbols from '../symbols';
 
 const operate = (num1, num2, operation) => {
   let finalRes;
@@ -6,20 +7,20 @@ const operate = (num1, num2, operation) => {
   const b = Big(num2);
 
   switch (operation) {
-    case 'X':
+    case Symbols.multiplication:
       finalRes = a.times(b);
       break;
-    case '÷':
+    case Symbols.division:
       try {
         finalRes = a.div(b);
       } catch (error) {
         finalRes = 'Error';
       }
       break;
-    case '-':
+    case Symbols.subtraction:
       finalRes = a.minus(b);
       break;
-    case '+':
+    case Symbols.addition:
       finalRes = a.plus(b);
       break;
     default:

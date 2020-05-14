@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../style/Button.css';
 
-function Button({ btnName, color, wide }) {
+function Button({
+  btnName, color, wide, clickHandler,
+}) {
   const color2 = 'lightGray';
+  const handleClick = () => clickHandler(btnName);
 
   const buttonStyle = {
     width: wide ? '50%' : '25%',
@@ -12,13 +15,14 @@ function Button({ btnName, color, wide }) {
       || btnName === '=') ? color : color2,
     border: '1px solid #A0A0A0',
   };
-  return <button type="button" style={buttonStyle}>{btnName}</button>;
+  return <button type="button" style={buttonStyle} onClick={handleClick}>{btnName}</button>;
 }
 
 Button.propTypes = {
   btnName: PropTypes.string.isRequired,
   wide: PropTypes.bool,
   color: PropTypes.string,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {

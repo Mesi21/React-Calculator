@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../style/Display.css';
 
-function Display({ solution }) {
+function Display({ result }) {
   return (
-    <div id="Display"><h3>{solution}</h3></div>
+    <div id="Display"><h3>{result}</h3></div>
   );
 }
 
 Display.propTypes = {
-  solution: PropTypes.string,
+  result: PropTypes.string,
 };
 
-Display.defaultProps = { solution: '0' };
+Display.defaultProps = { result: '0' };
 
 export default Display;
