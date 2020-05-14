@@ -34,7 +34,7 @@ const calculate = (btnName, dataObj) => {
       total *= ops[btnName];
       return { total, next };
     case '=': {
-      const [num1, num2] = total.split(operation).map((num) => num.trim());
+      const [num1, num2] = total.split(operation).map(num => num.trim());
       total = operate(num1, num2, operation);
       operation = '';
       return { total, next, operation };
