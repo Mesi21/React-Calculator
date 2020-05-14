@@ -4,7 +4,7 @@ import Button from './Button';
 import '../style/ButtonPanel.css';
 
 function ButtonPanel({ clickHandler }) {
-  const handleClick = (btnName) => clickHandler(btnName);
+  const handleClick = btnName => clickHandler(btnName);
   return (
     <div id="btnPanel">
       <div className="rows">

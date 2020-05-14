@@ -14,9 +14,9 @@ class App extends Component {
     };
   }
 
-  returnError = (err) => err;
+  returnError = err => err;
 
-  handleClick = (btnName) => {
+  handleClick = btnName => {
     try {
       const { total, operation } = calculate(btnName, this.state);
       this.setState({ total, operation });
