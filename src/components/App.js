@@ -14,12 +14,14 @@ class App extends Component {
     };
   }
 
+  returnError = (err) => err;
+
   handleClick = (btnName) => {
     try {
       const { total, operation } = calculate(btnName, this.state);
       this.setState({ total, operation });
     } catch (err) {
-      console.log(err.message);
+      this.returnError();
     }
   };
 
