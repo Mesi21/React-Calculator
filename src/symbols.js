@@ -1,7 +1,7 @@
 const Symbols = {
   addition: '+',
   subtraction: '-',
-  multiplication: '*',
+  multiplication: 'X',
   division: '÷',
   percentage: '%',
   sign: '+/-',
