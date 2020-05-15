@@ -29,9 +29,20 @@ class App extends Component {
     const { total } = this.state;
     const result = total.toString();
     return (
-      <div id="app">
-        <Display result={result} />
-        <ButtonPanel clickHandler={this.handleClick} />
+      <div id="page">
+        <header className="header">
+          <h1>Magic Calculator</h1>
+        </header>
+        <div id="app">
+          <div className="calc">
+            <Display result={result} />
+            <ButtonPanel clickHandler={this.handleClick} />
+          </div>
+        </div>
+        <footer className="footer">
+          <p>&copy;  Molnar Emese 2020</p>
+          <p id="descript">A calculator app with basic functionalities build with React</p>
+        </footer>
       </div>
     );
   }
