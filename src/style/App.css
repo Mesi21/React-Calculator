@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    margin-bottom: 25px;
+    height: 90px;
+    background-color: rgb(136, 16, 16);
+    color: #fff;
+}
+
+#app{
+    margin: 100px auto 0px auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0px;
+    height: 50px;
+    background-color: rgb(104, 103, 103);
+    color: #fff;
+}
